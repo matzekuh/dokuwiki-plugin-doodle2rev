@@ -13,7 +13,7 @@
 ?>
 
 <!-- Doodle Plugin -->
-<div style="overflow-x:scroll">
+<div class="doodle2_scrollcontainer">
 <form action="<?php echo wl() ?>" method="post" name="doodle__form" id="<?php echo $template['formId'] ?>" accept-charset="utf-8" >
 
 <input type="hidden" name="sectok" value="<?php echo getSecurityToken() ?>" />
