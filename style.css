@@ -9,7 +9,7 @@ div.dokuwiki table.inline td.notokay {
 }
 
 .doodle__edit {
-  background:url(../../../lib/images/pencil.png) top right no-repeat;
+  background:url(../../../lib/images/ns.png) top right no-repeat;
   width: 20px;
   height: 20px;
   padding: 0 0 0 10px;
@@ -19,7 +19,7 @@ div.dokuwiki table.inline td.notokay {
 }
 
 .doodle__delete {
-  background:url(../../../lib/images/del.png) top right no-repeat;
+  background:url(../../../lib/images/trash.png) top right no-repeat;
   width: 20px;
   height: 20px;
   padding: 0 0 0 10px;
