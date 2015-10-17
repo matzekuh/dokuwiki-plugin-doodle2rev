@@ -1,13 +1,14 @@
 <?php
 /**
- * Doodle Plugin 2.0: helps to schedule meetings
+ * Doodle Plugin 2.0 rev: helps to schedule meetings
  *
  * @license	GPL 2 (http://www.gnu.org/licenses/gpl.html)
- * @url     http://www.dokuwiki.org/plugin:doodle2
- * @author  Robert Rackl <wiki@doogie.de>
+ * @url     	http://www.dokuwiki.org/plugin:doodle2rev
+ * @author	Matthias Jung <matzekuh@web.de>
+ * @author  	Robert Rackl <wiki@doogie.de>
  * @author	Jonathan Tsai <tryweb@ichiayi.com>
- * @author  Esther Brunner <wikidesign@gmail.com>
- * @author  Romain Coltel <aorimn@gmail.com>
+ * @author  	Esther Brunner <wikidesign@gmail.com>
+ * @author  	Romain Coltel <aorimn@gmail.com>
  */
 
 if(!defined('DOKU_INC')) define('DOKU_INC',realpath(dirname(__FILE__).'/../../').'/');
@@ -52,7 +53,7 @@ require_once(DOKU_PLUGIN.'syntax.php');
  * The doodle's data is saved in '<dokuwiki>/data/meta/title_of_vote.doodle'. The filename is the (masked) title. 
  * This has the advantage that you can move your doodle to another page, without loosing the data.
  */
-class syntax_plugin_doodlev2 extends DokuWiki_Syntax_Plugin 
+class syntax_plugin_doodle2rev extends DokuWiki_Syntax_Plugin 
 {
     const AUTH_NONE = 0;
     const AUTH_IP   = 1;
@@ -63,12 +64,12 @@ class syntax_plugin_doodlev2 extends DokuWiki_Syntax_Plugin
      */
     function getInfo() {
         return array(
-            'author' => 'Robert Rackl',
-            'email'  => 'wiki@doogie.de',
-            'date'   => '2010/10/26',
-            'name'   => 'Doodle Plugin 2.0',
+            'author' => 'Matthias Jung',
+            'email'  => 'matzekuh@web.de',
+            'date'   => '2015/10/17',
+            'name'   => 'Doodle Plugin 2.0 rev',
             'desc'   => 'helps to schedule meetings',
-            'url'    => 'http://wiki.splitbrain.org/plugin:doodle2',
+            'url'    => 'https://www.dokuwiki.org/plugin:doodle2rev',
         );
     }
 
@@ -80,7 +81,7 @@ class syntax_plugin_doodlev2 extends DokuWiki_Syntax_Plugin
      * Connect pattern to lexer
      */
     function connectTo($mode) {
-        $this->Lexer->addSpecialPattern('<doodle\b.*?>.+?</doodle>', $mode, 'plugin_doodlev2');
+        $this->Lexer->addSpecialPattern('<doodle\b.*?>.+?</doodle>', $mode, 'plugin_doodle2rev');
     }
 
     /**
@@ -308,10 +309,10 @@ class syntax_plugin_doodlev2 extends DokuWiki_Syntax_Plugin
                 // the javascript source of these functions is in script.js
                 $this->template['doodleData']["$fullname"]['editLinks'] = 
                    '<a href="javascript:editEntry(\''.$formId.'\',\''.$fullname.'\')">'.
-                   '  <img src="'.DOKU_BASE.'lib/images/ns.png" alt="edit entry" style="float:left">'.
+                   '  <img src="'.DOKU_BASE.'lib/plugins/doodle2rev/pencil.png" alt="edit entry" style="float:left">'.
                    '</a>'.
                    '<a href="javascript:deleteEntry(\''.$formId.'\',\''.$fullname.'\')">'.
-                   '  <img src="'.DOKU_BASE.'lib/images/trash.png" alt="delete entry" style="float:left">'.
+                   '  <img src="'.DOKU_BASE.'lib/plugins/doodle2rev/delete.png" alt="delete entry" style="float:left">'.
                    '</a>';
             }
         }
