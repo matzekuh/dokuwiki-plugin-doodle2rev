@@ -1,0 +1,6 @@
+base   doodlev2
+author Robert Rackl, Matthias Jung
+email  matzekuh@web.de
+date   2015-10-17
+name   Doodle Plugin
+desc   Let users vote for given choices, e.g. to schedule a meeting. Based on http://www.dokuwiki.org/plugin:doodle2
